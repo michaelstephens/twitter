@@ -10,7 +10,11 @@ Download and install Docker
 ### Setting up the app
 1. Run `git clone https://github.com/mikestephens/twitter.git`
 2. Run `cd twitter`
-3. Run `docker-compose build`
+4. Run `docker-compose build`
+3. Run `docker-compose up`
+4. Run `docker-compose run web rake db:create db:setup`
+
+If you see the error `web_1 | A server is already` run `rm tmp/pids/server.pid`
 
 ### Running the app
 `docker-compose up` - Runs the app server so you can access it at `localhost:3000` in your browser
