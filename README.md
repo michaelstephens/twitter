@@ -1,24 +1,15 @@
-# README
+# Twitter
+A Twitter clone in Rails for [Hackathon by the Sea](https://www.hackathonbythesea.com/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting Started
+### Setting up the app
+1. Run `git clone https://github.com/mikestephens/twitter.git`
+2. Run `cd twitter`
+3. Run `gem install bundler`
+4. Run `bundle install`
+5. Run `rake db:migrate`
 
-Things you may want to cover:
+### Running the app
+`rails s` - Runs the app server so you can access it at `localhost:3000` in your browser
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`rails c` - Runs the app console so you can interface with your code and your database
