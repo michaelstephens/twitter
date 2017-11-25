@@ -13,11 +13,12 @@ Download and install Docker
 3. Run `docker-compose build`
 
 ### Running the app
-`docker-compose up` - Starts the application
+`docker-compose up` - Runs the app server so you can access it at `localhost:3000` in your browser
 
-`docker-compose down` - Stops the application
+`docker-compose down` - Stops the app server
 
-### Running the app
-`rails s` - Runs the app server so you can access it at `localhost:3000` in your browser
+`docker-compose run web rake db:migrate` - Makes changes to the databases
 
-`rails c` - Runs the app console so you can interface with your code and your database
+`docker-compose run web bundle install` - Installs new gems
+
+`docker-compose run web bundle exec rails c` - Runs the app console so you can interface with your code and your database
