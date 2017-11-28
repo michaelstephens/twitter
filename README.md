@@ -28,8 +28,8 @@ If you see the error `web_1 | A server is already` run `rm tmp/pids/server.pid`
 
 `docker-compose run web bundle exec rails c` - Runs the app console so you can interface with your code and your database
 
-### Setting up the app
 ## Getting Started (Non Docker)
+### Setting up the app
 1. Run `git clone https://github.com/mikestephens/twitter.git`
 2. Run `cd twitter`
 3. Run `git checkout non_docker`
