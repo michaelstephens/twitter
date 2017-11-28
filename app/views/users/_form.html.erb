@@ -4,6 +4,27 @@
     <br />
   <% end %>
   <div class="form-group">
+    <%= form.label :username do %>
+      Email
+      <a style="color: red;"> *</a>
+    <% end %>
+    <%= form.text_field :username, id: :user_username, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :first_name do %>
+      Email
+      <a style="color: red;"> *</a>
+    <% end %>
+    <%= form.text_field :first_name, id: :user_first_name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :last_name do %>
+      Email
+      <a style="color: red;"> *</a>
+    <% end %>
+    <%= form.text_field :last_name, id: :user_last_name, class: "form-control" %>
+  </div>
+  <div class="form-group">
     <%= form.label :email do %>
       Email
       <a style="color: red;"> *</a>

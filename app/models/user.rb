@@ -6,4 +6,19 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
 
   validates :email, uniqueness: true, presence: true
+  validates :username, uniqueness: true, presence: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+
+  def name
+    "#{first_name} #{last_name}"
+  end
+
+  def to_s
+    name
+  end
+
+  def formatted_username
+    "@#{username}"
+  end
 end
