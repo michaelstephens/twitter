@@ -11,6 +11,7 @@ class User < ApplicationRecord
   validates :last_name, presence: true
 
   has_many :tweets
+  has_many :replies
 
   def name
     "#{first_name} #{last_name}"

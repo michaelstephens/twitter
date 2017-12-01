@@ -14,6 +14,7 @@ gem 'sass-rails'
 gem 'sorcery'
 gem 'turbolinks'
 gem 'uglifier'
+gem 'nested_scaffold'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

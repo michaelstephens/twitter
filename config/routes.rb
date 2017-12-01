@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :tweets
+  resources :tweets do
+    resources :replies
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :users
   resources :user_sessions
