@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tweets
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :users
   resources :user_sessions
@@ -7,5 +8,5 @@ Rails.application.routes.draw do
   post 'logout' => 'user_sessions#destroy', :as => :logout
   get 'signup' => 'users#new', as: :signup
 
-  root to: 'users#new'
+  root to: 'tweets#index'
 end
