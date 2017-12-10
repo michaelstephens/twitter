@@ -1,0 +1,30 @@
+<div class="card w-100">
+  <div class="card-body">
+    <h4 class="card-title">
+      <%= @tweet.user.name %>
+      <% if current_user == @tweet.user %>
+        <%= link_to 'Edit', edit_tweet_path(@tweet), class: "btn btn-sm btn-secondary pull-right" %>
+      <% end %>
+    </h4>
+    <h6 class="card-subtitle mb-2 text-muted"><%= @tweet.user.formatted_username %></h6>
+    <p class="card-text"><%= @tweet.content %></p>
+    <a href="#" class="card-link">Like</a>
+    <a href="#" class="card-link">Reply</a>
+  </div>
+</div>
+<br />
+<%= link_to 'New Reply', new_tweet_reply_path(@tweet), class: "btn btn-primary" %>
+<br />
+<br />
+
+<ul class="list-unstyled">
+  <% @replies.each do |reply| %>
+    <li class="media">
+      <div class="media-body">
+        <h3 class="mt-0 mb-1"><%= reply.user.name %></h3>
+        <h6 class="mt-0 mb-1"><%= reply.user.formatted_username %></h6>
+        <%= reply.content %>
+      </div>
+    </li>
+  <% end %>
+</ul>

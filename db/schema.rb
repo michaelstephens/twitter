@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171201042935) do
+ActiveRecord::Schema.define(version: 20171201045406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "replies", force: :cascade do |t|
+    t.bigint "tweet_id"
+    t.text "content"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tweet_id"], name: "index_replies_on_tweet_id"
+  end
 
   create_table "tweets", force: :cascade do |t|
     t.string "content"
@@ -34,4 +43,5 @@ ActiveRecord::Schema.define(version: 20171201042935) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "replies", "tweets"
 end
