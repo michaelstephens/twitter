@@ -13,7 +13,7 @@
         <% end %>
       </h4>
       <h6 class="card-subtitle mb-2 text-muted"><%= tweet.user.formatted_username %></h6>
-      <p class="card-text"><%= tweet.content %></p>
+      <p class="card-text"><%= raw tweet.at_mention_content %></p>
       <a href="#" class="card-link">Like</a>
       <a href="#" class="card-link"><%= link_to 'Reply', tweet_replies_path(tweet) %></a>
     </div>
